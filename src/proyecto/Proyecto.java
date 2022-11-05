@@ -1,9 +1,9 @@
-package Proyecto;
+package proyecto;
 
 import java.util.ArrayList;
 
-import Muestra.Muestra;
-import Usuario.Usuario;
+import muestra.Muestra;
+import usuario.Usuario;
 
 public class Proyecto {
 	
