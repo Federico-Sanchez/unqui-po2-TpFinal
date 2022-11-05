@@ -1,12 +1,11 @@
-package restriccionTemporal;
+package desafio;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public abstract class RestriccionTemporal {
 
-	
-	public abstract boolean esRestriccion(Date fecha);
+public abstract boolean esRestriccion(Date fecha);
 	
 	
 	public SimpleDateFormat formatoDia() {

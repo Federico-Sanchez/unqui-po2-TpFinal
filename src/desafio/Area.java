@@ -1,6 +1,4 @@
-package area;
-
-import coordenada.Coordenada;
+package desafio;
 
 public class Area {
 	private Coordenada coordenada;
@@ -23,5 +21,4 @@ public class Area {
 	public double getRadio() {
 		return radio;
 	}
-	
 }

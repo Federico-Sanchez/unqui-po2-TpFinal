@@ -1,9 +1,8 @@
 package desafio;
 
-import area.Area;
-import restriccionTemporal.RestriccionTemporal;
 
 public class Desafio {
+	
 	private Area area;
 	private RestriccionTemporal restriccion;
 	private double cantidadDeMuestra;
