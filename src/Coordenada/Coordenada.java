@@ -5,7 +5,6 @@ public class Coordenada {
 	private double longitud;
 	
 	
-	
 	public Coordenada(double latitud, double longitud) {
 		super();
 		this.latitud = latitud;
