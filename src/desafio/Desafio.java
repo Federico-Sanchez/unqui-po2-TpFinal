@@ -2,6 +2,7 @@ package desafio;
 
 
 public class Desafio {
+	
 	private Area area;
 	private RestriccionTemporal restriccion;
 	private double cantidadDeMuestra;
@@ -18,4 +19,5 @@ public class Desafio {
 		this.dificultad = dificultad;
 		this.recompensa = recompensa;
 	}
+	
 }
