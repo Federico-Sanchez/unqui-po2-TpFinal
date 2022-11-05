@@ -1,7 +1,5 @@
 package desafio;
 
-import area.Area;
-import restriccionTemporal.RestriccionTemporal;
 
 public class Desafio {
 	private Area area;
@@ -20,5 +18,4 @@ public class Desafio {
 		this.dificultad = dificultad;
 		this.recompensa = recompensa;
 	}
-	
 }
