@@ -2,6 +2,7 @@ package proyecto;
 
 import java.util.ArrayList;
 
+import desafio.Desafio;
 import muestra.Muestra;
 import usuario.Usuario;
 
@@ -12,6 +13,7 @@ public class Proyecto {
 	private ArrayList<String> categorias = new ArrayList<String>();
 	private ArrayList<Usuario> usuariosActivos = new ArrayList<Usuario>();
 	private ArrayList<Muestra> muestras = new ArrayList<Muestra>();
+	private ArrayList<Desafio> desafios = new ArrayList<Desafio>();
 	
 	public Proyecto(String nombre, String descripcion, ArrayList<String> categorias) {
 		super();
@@ -59,6 +61,20 @@ public class Proyecto {
 	public void setCategorias(ArrayList<String> categorias) {
 		this.categorias = categorias;
 	}
+
+	public ArrayList<Desafio> getDesafios() {
+		return desafios;
+	}
+
+	public void agregarDesafio(Desafio desafio) {
+		this.desafios.add(desafio);
+		notificarUsuarios(desafio);
+	}
 	
-	
+	public void notificarUsuarios(Desafio desafio) {
+		for (Usuario usuario : this.usuariosActivos) {
+			usuario.update(desafio);
+		}
+	}
+		
 }

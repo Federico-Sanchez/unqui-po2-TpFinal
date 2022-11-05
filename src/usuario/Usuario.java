@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 import java.util.List;
 
+import desafio.Desafio;
 import muestra.Muestra;
 import proyecto.Proyecto;
-import Desafio.Desafio;
 
 
 public class Usuario {
@@ -73,6 +73,11 @@ public class Usuario {
 	
 	public double coincidenciaDesafio(Desafio desafio) {
 		return this.estado.coincidenciaDesafio(desafio, this);
+	}
+
+	public void update(Desafio desafio) {
+		// TODO Auto-generated method stub
+		
 	};
 	
 }
