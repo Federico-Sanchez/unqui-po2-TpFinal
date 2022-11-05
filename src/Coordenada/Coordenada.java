@@ -1,4 +1,4 @@
-package Coordenada;
+package coordenada;
 
 public class Coordenada {
 	private double latitud;
