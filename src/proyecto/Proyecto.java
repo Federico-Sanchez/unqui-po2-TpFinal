@@ -1,6 +1,7 @@
 package proyecto;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import muestra.Muestra;
 import usuario.Usuario;
@@ -61,6 +62,10 @@ public class Proyecto {
 	}
 	
 	public Boolean tieneElTextoEnElTitulo(String texto) {
+		return false;
+	}
+
+	public Boolean tieneLasCategorias(List<String> categorias2) {
 		return false;
 	}
 	

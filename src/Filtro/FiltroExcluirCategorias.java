@@ -17,7 +17,7 @@ public class FiltroExcluirCategorias implements IFiltro{
 	@Override
 	public List<Proyecto> filter(List<Proyecto> proyectos) {
 		return proyectos.stream()
-				.filter(proyecto -> !proyecto.tieneLasCategorias(getCategorias())
+				.filter(proyecto -> !proyecto.tieneLasCategorias(getCategorias()))
 				.collect(Collectors.toList());
 	}
 
