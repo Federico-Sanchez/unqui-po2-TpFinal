@@ -6,7 +6,8 @@ import static org.mockito.Mockito.mock;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import Muestra.Muestra;
+import muestra.Muestra;
+import proyecto.Proyecto;
 
 class ProyectoTest {
 

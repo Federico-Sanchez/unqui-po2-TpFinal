@@ -3,7 +3,7 @@ package sistema;
 import java.util.ArrayList;
 import java.util.List;
 
-import Filtro.IFiltro;
+import filtro.IFiltro;
 import proyecto.Proyecto;
 
 public class Sistema {

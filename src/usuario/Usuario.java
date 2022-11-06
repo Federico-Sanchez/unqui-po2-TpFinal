@@ -75,4 +75,8 @@ public class Usuario {
 		return this.estado.coincidenciaDesafio(desafio, this);
 	};
 	
+	public void nuevoDesafio(Desafio desafio) {
+		// accion (chequear si cambia su estado?)
+	}
+	
 }

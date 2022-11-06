@@ -1,4 +1,4 @@
-package Filtro;
+package filtro;
 
 import java.util.List;
 import java.util.stream.Collectors;
