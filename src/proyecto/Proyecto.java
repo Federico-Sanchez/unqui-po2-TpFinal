@@ -1,9 +1,9 @@
-package Proyecto;
+package proyecto;
 
 import java.util.ArrayList;
 
-import Muestra.Muestra;
-import Usuario.Usuario;
+import muestra.Muestra;
+import usuario.Usuario;
 
 public class Proyecto {
 	
@@ -60,5 +60,8 @@ public class Proyecto {
 		this.categorias = categorias;
 	}
 	
+	public Boolean tieneElTextoEnElTitulo(String texto) {
+		return false;
+	}
 	
 }
