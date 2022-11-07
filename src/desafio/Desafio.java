@@ -20,6 +20,23 @@ public class Desafio {
 		this.dificultad = dificultad;
 		this.recompensa = recompensa;
 	}
+	
+	
+	public double getCantidadDeMuestra() {
+		return cantidadDeMuestra;
+	}
+
+
+
+	public int getDificultad() {
+		return dificultad;
+	}
+
+
+
+	public int getRecompensa() {
+		return recompensa;
+	}
 
 	public Boolean estaCompletado() {
 		return porcentajeDeCompletitud() == 100;
