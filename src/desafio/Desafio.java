@@ -6,13 +6,13 @@ public class Desafio {
 	
 	private Area area;
 	private RestriccionTemporal restriccion;
-	private double cantidadDeMuestra;
+	private int cantidadDeMuestra;
 	private int dificultad;
 	private int recompensa;
 	
 	
 	
-	public Desafio(Area area, RestriccionTemporal restriccion, double cantidadDeMuestra, int dificultad, int recompensa) {
+	public Desafio(Area area, RestriccionTemporal restriccion, int cantidadDeMuestra, int dificultad, int recompensa) {
 		super();
 		this.area = area;
 		this.restriccion = restriccion;
@@ -22,7 +22,7 @@ public class Desafio {
 	}
 	
 	
-	public double getCantidadDeMuestra() {
+	public int getCantidadDeMuestra() {
 		return cantidadDeMuestra;
 	}
 
