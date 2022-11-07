@@ -2,7 +2,7 @@ package muestra;
 
 import java.util.Date;
 
-import coordenada.Coordenada;
+import desafio.Coordenada;
 import usuario.Usuario;
 
 
@@ -15,8 +15,7 @@ public class Muestra {
 	
 	
 	public Muestra(Coordenada coordenadaGeografica, Usuario usuario, Date fechaYHora) {
-		super();
-		this.coordenadaGeografica = coordenadaGeografica;
+		this.setCoordenadaGeografica(coordenadaGeografica);
 		this.usuario = usuario;
 		this.fechaYHora = fechaYHora;
 	}
@@ -41,5 +40,15 @@ public class Muestra {
 	
 	public String getHoraYMinutos() {
 		return this.getSoloHora() + ":" + this.getSoloMinutos();
+	}
+
+
+	public Coordenada getCoordenadaGeografica() {
+		return coordenadaGeografica;
+	}
+
+
+	public void setCoordenadaGeografica(Coordenada coordenadaGeografica) {
+		this.coordenadaGeografica = coordenadaGeografica;
 	}
 }

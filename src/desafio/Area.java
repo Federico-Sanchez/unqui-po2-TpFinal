@@ -1,5 +1,7 @@
 package desafio;
 
+import muestra.Muestra;
+
 public class Area {
 	private Coordenada coordenada;
 	private double radio;
@@ -20,5 +22,11 @@ public class Area {
 
 	public double getRadio() {
 		return radio;
+	}
+
+
+	public boolean estaDentroDeLaZona(Muestra muestra) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 }

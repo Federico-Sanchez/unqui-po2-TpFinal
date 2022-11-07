@@ -3,6 +3,7 @@ package usuario;
 import java.util.ArrayList;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import muestra.Muestra;
 import proyecto.Proyecto;
@@ -18,7 +19,7 @@ public class Usuario {
 	private List <Proyecto> proyectos = new ArrayList<Proyecto>();
 	private PerfilUsuario perfil;
 	private Recomendacion estado;
-	
+	private List <Desafio> desafiosAceptados = new ArrayList<Desafio>(); 
 	
 	public Usuario(String nombre,String descripcion,List<String> categorias,PerfilUsuario perfil,Recomendacion estado) {
 		this.nombre = nombre;
@@ -35,20 +36,23 @@ public class Usuario {
 	
 	public void addMuestra(Muestra muestra) {
 		muestras.add(muestra);
+		notificarNuevaMuestra(muestra);
+	}
+	
+	public void notificarNuevaMuestra(Muestra muestra) {
+		for (Desafio desafio : getDesafiosAceptados()) {
+			desafio.nuevaMuestra(muestra);
+		}
 	}
 
 	
 	public List<Muestra> getMuestras() {
 		return muestras;
 	}
-
-
 	
 	public List<Proyecto> getProyectos() {
 		return proyectos;
 	}
-
-	
 
 	public PerfilUsuario getPerfil() {
 		return perfil;
@@ -76,7 +80,20 @@ public class Usuario {
 	};
 	
 	public void nuevoDesafio(Desafio desafio) {
-		// accion (chequear si cambia su estado?)
+		if(true) { //aca deberia ser estado.coicideDesafio(Desafio)
+			this.desafiosAceptados.add(desafio);
+		}
+	}
+	
+	public List<Desafio> desafiosCompletados() {
+		return getDesafiosAceptados()
+				.stream()
+				.filter(desafio -> desafio.estaCompletado())
+				.collect(Collectors.toList());
+	}
+
+	private List<Desafio> getDesafiosAceptados() {
+		return this.desafiosAceptados;
 	}
 	
 }
