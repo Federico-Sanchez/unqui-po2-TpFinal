@@ -31,7 +31,4 @@ public abstract class  Recomendacion {
 			   Math.abs(desafio.getRecompensa() - this.perfil.getRecompensa()); 
 	};
 	
-	
-	
-	
 }
