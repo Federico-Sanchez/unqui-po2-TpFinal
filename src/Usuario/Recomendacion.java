@@ -26,9 +26,9 @@ public abstract class  Recomendacion {
 	
 
 	public double coincidenciaDesafio(Desafio desafio,Usuario usuario) {
-		return Math.abs(desafio.cantidadDeMuestrasARecolectar()- usuario.getPerfil().getCantidadDeMuestrasARecolectar()) + 
-			   Math.abs(desafio.dificultad() - this.perfil.getDificultad()) + 
-			   Math.abs(desafio.recompensa() - this.perfil.getRecompensa()); 
+		return Math.abs(desafio.getCantidadDeMuestra()- usuario.getPerfil().getCantidadDeMuestrasARecolectar()) + 
+			   Math.abs(desafio.getDificultad() - this.perfil.getDificultad()) + 
+			   Math.abs(desafio.getRecompensa() - this.perfil.getRecompensa()); 
 	};
 	
 	
