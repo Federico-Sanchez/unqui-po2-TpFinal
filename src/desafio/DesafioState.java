@@ -13,4 +13,5 @@ public abstract class DesafioState {
 	public void nuevaMuestra(DesafioUsuario desafioUsuario, Muestra muestra) {};
 
 	public abstract int getPorcentajeDeCompletitud(DesafioUsuario desafioUsuario);
+
 }

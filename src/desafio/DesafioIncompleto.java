@@ -1,5 +1,7 @@
 package desafio;
 
+import java.time.LocalTime;
+
 import muestra.Muestra;
 
 public class DesafioIncompleto extends DesafioState {
@@ -10,6 +12,7 @@ public class DesafioIncompleto extends DesafioState {
 			
 			if(desafioUsuario.esUltimaMuestra()) {
 				desafioUsuario.setEstado(new DesafioCompletado());
+				desafioUsuario.setMomentoSuperado(LocalTime.now());
 			}
 		}
 	}

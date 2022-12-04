@@ -1,6 +1,6 @@
 package desafio;
 
-import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.Date;
 
 import coordenada.Coordenada;
@@ -9,27 +9,26 @@ import usuario.Usuario;
 
 public class DesafioUsuario {
 	
-	private LocalDate momentoSuperado;
+	private LocalTime momentoSuperado;
 	private int voto;
 	private Desafio desafio;
 	private DesafioState estado;
 	private Usuario usuario;
 	private int MuestrasRecolectadas;
 	
-	public DesafioUsuario(LocalDate momentoSuperado, int voto, Desafio desafio, Usuario usuario) {
-		this.momentoSuperado = momentoSuperado;
+	public DesafioUsuario(int voto, Desafio desafio, Usuario usuario) {
 		this.voto = voto;
 		this.desafio = desafio;
 		this.usuario = usuario;
 		this.estado = new DesafioIncompleto();
 	}
 	
-	public LocalDate getMomentoSuperado() {
+	public LocalTime getMomentoSuperado() {
 		return momentoSuperado;
 	}
 
-	public void setMomentoSuperado(LocalDate momentoSuperado) {
-		this.momentoSuperado = momentoSuperado;
+	public void setMomentoSuperado(LocalTime localTime) {
+		this.momentoSuperado = localTime;
 	}
 
 	public int getVoto() {
