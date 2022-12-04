@@ -1,8 +1,10 @@
-package desafio;
+package restrinccionTemporal;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
+import muestra.Muestra;
 
 public class RestriccionCombinada extends RestriccionTemporal {
 	List<RestriccionTemporal> restricciones = new ArrayList<RestriccionTemporal>();
@@ -33,6 +35,13 @@ public class RestriccionCombinada extends RestriccionTemporal {
 		}
 		
 		return (cantidadDeRestricciones > 0);
+	}
+
+
+	@Override
+	protected boolean estaEnFecha(Muestra muestra) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 	
 }

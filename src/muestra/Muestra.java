@@ -2,7 +2,7 @@ package muestra;
 
 import java.util.Date;
 
-import desafio.Coordenada;
+import coordenada.Coordenada;
 import usuario.Usuario;
 
 
@@ -12,14 +12,11 @@ public class Muestra {
 	private Usuario usuario;
 	private Date fechaYHora;
 	
-	
-	
 	public Muestra(Coordenada coordenadaGeografica, Usuario usuario, Date fechaYHora) {
 		this.setCoordenadaGeografica(coordenadaGeografica);
-		this.usuario = usuario;
+		this.setUsuario(usuario);
 		this.fechaYHora = fechaYHora;
 	}
-	
 	
 	public Date getFechaYHora() {
 		return fechaYHora;
@@ -50,5 +47,13 @@ public class Muestra {
 
 	public void setCoordenadaGeografica(Coordenada coordenadaGeografica) {
 		this.coordenadaGeografica = coordenadaGeografica;
+	}
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 }

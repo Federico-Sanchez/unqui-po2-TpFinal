@@ -6,29 +6,12 @@ import java.util.stream.Stream;
 import desafio.Desafio;
 import proyecto.Proyecto;
 
-public class PreferenciasEnJuego extends Recomendacion{
+public class PreferenciasEnJuego implements PerfilUsuario {
 
-	
-	
-	
-
-	
-
-	public PreferenciasEnJuego(int cantidadDeMuestras, int dificultad, int recompensa) {
-		super(cantidadDeMuestras, dificultad, recompensa);
-	}
-
-	
-	
 	@Override
-	public List<Desafio> seleccionarDesafio(Proyecto proyectos ) {
+	public List<Desafio> recomendarDesafios(Preferencia preferencia) {
+		// TODO Auto-generated method stub
 		return null;
 	}
-
-
-
-
-
-
 	
 }

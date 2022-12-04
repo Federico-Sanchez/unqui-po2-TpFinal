@@ -1,18 +1,18 @@
 package desafio;
 
+import coordenada.Coordenada;
 import muestra.Muestra;
+import restrinccionTemporal.RestriccionTemporal;
 
 public class Desafio {
 	
-	private Area area;
+	private Coordenada area;
 	private RestriccionTemporal restriccion;
 	private int cantidadDeMuestra;
 	private int dificultad;
 	private int recompensa;
 	
-	
-	
-	public Desafio(Area area, RestriccionTemporal restriccion, int cantidadDeMuestra, int dificultad, int recompensa) {
+	public Desafio(Coordenada area, RestriccionTemporal restriccion, int cantidadDeMuestra, int dificultad, int recompensa) {
 		super();
 		this.area = area;
 		this.restriccion = restriccion;
@@ -47,11 +47,4 @@ public class Desafio {
 		return 0;
 	}
 
-
-	public void nuevaMuestra(Muestra muestra) {
-		if(area.estaDentroDeLaZona(muestra) && restriccion.estaEnFecha(muestra) && !estaCompletado()) {			
-			this.cantidadDeMuestra = this.cantidadDeMuestra + 1;
-		}
-	}
-	
 }

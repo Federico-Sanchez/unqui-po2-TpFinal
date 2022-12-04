@@ -14,7 +14,6 @@ public class Proyecto {
 	private ArrayList<String> categorias = new ArrayList<String>();
 	private ArrayList<Usuario> usuariosActivos = new ArrayList<Usuario>();
 	private ArrayList<Muestra> muestras = new ArrayList<Muestra>();
-	private ArrayList<Desafio> desafios = new ArrayList<Desafio>();
 	
 	public Proyecto(String nombre, String descripcion, ArrayList<String> categorias) {
 		super();
@@ -71,19 +70,4 @@ public class Proyecto {
 		return false;
 	}
 
-	public ArrayList<Desafio> getDesafios() {
-		return desafios;
-	}
-
-	public void agregarDesafio(Desafio desafio) {
-		this.desafios.add(desafio);
-		notificarUsuarios(desafio);
-	}
-
-	private void notificarUsuarios(Desafio desafio) {
-		for (Usuario usuario : getUsuariosActivos()) {
-			usuario.nuevoDesafio(desafio);
-		}
-	}
-	
 }

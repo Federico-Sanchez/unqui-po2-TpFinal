@@ -1,6 +1,8 @@
-package desafio;
+package restrinccionTemporal;
 
 import java.util.Date;
+
+import muestra.Muestra;
 
 
 
@@ -34,5 +36,12 @@ public class EntreFechas extends RestriccionTemporal {
 		} else {
 			return false;
 		}
+	}
+
+
+	@Override
+	protected boolean estaEnFecha(Muestra muestra) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 }

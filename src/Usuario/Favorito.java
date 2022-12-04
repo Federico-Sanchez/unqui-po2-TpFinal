@@ -5,26 +5,12 @@ import java.util.List;
 import desafio.Desafio;
 import proyecto.Proyecto;
 
-public class Favorito extends Recomendacion{
-
-	
-
-	public Favorito(int cantidadDeMuestras, int dificultad, int recompensa) {
-		super(cantidadDeMuestras, dificultad, recompensa);
-	}
+public class Favorito implements PerfilUsuario {
 
 	@Override
-	public List<Desafio> seleccionarDesafio(Proyecto proyectos) {
+	public List<Desafio> recomendarDesafios(Preferencia preferencia) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	
-
-	
-	
-	
-	
-	
-	
 }

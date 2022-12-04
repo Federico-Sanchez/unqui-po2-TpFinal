@@ -1,4 +1,4 @@
-package desafio;
+package coordenada;
 
 public class Coordenada {
 	private double latitud;
@@ -11,13 +11,9 @@ public class Coordenada {
 		this.longitud = longitud;
 	}
 
-
-
 	public double getLatitud() {
 		return latitud;
 	}
-
-
 
 	public double getLongitud() {
 		return longitud;

@@ -8,92 +8,55 @@ import java.util.stream.Collectors;
 import muestra.Muestra;
 import proyecto.Proyecto;
 import desafio.Desafio;
+import desafio.DesafioUsuario;
 
 
 public class Usuario {
 	
 	private String nombre;
-	private String descripcion;
-	private List <String> categorias = new ArrayList<String>();
-	private List<Muestra> muestras = new ArrayList<Muestra>();
-	private List <Proyecto> proyectos = new ArrayList<Proyecto>();
-	private PerfilUsuario perfil;
-	private Recomendacion estado;
-	private List <Desafio> desafiosAceptados = new ArrayList<Desafio>(); 
+	private List<Muestra> muestrasRecolectadas = new ArrayList<Muestra>();
+	private PerfilUsuario perfilUsuario;
+	private Preferencia preferencia;
+	private List <DesafioUsuario> desafiosAceptados = new ArrayList<DesafioUsuario>(); 
 	
-	public Usuario(String nombre,String descripcion,List<String> categorias,PerfilUsuario perfil,Recomendacion estado) {
-		this.nombre = nombre;
-		this.descripcion = descripcion;
-		this.categorias = categorias;
-		this.perfil = perfil;
-		this.estado = estado;
+	public Usuario(String nombre, PerfilUsuario perfilUsuario, Preferencia estado) {
+		this.setNombre(nombre);
+		this.perfilUsuario = perfilUsuario;
+		this.preferencia = estado;
 	}
-	
-	public void addProyecto(Proyecto proyecto) {
-		proyectos.add(proyecto);
-	}
-	
 	
 	public void addMuestra(Muestra muestra) {
-		muestras.add(muestra);
-		notificarNuevaMuestra(muestra);
+		muestrasRecolectadas.add(muestra);
 	}
 	
-	public void notificarNuevaMuestra(Muestra muestra) {
-		for (Desafio desafio : getDesafiosAceptados()) {
-			desafio.nuevaMuestra(muestra);
-		}
-	}
-
 	
 	public List<Muestra> getMuestras() {
-		return muestras;
-	}
-	
-	public List<Proyecto> getProyectos() {
-		return proyectos;
+		return muestrasRecolectadas;
 	}
 
 	public PerfilUsuario getPerfil() {
-		return perfil;
+		return perfilUsuario;
 	}
 
 	public void setPerfil(PerfilUsuario nuevoPerfil) {
-		this.perfil = nuevoPerfil;
+		this.perfilUsuario = nuevoPerfil;
 	}
 	
 	
-	public void setEstado(Recomendacion estado) {
-		this.estado = estado;
+	public void setEstado(Preferencia estado) {
+		this.preferencia = estado;
 	}
 	
-	public Recomendacion getEstado() {
-		return this.estado;
-	}
-	
-	public List<Desafio> seleccionarDesafios(Proyecto proyectos) {
-		return this.estado.seleccionarDesafio(proyectos);
-	};
-	
-	public double coincidenciaDesafio(Desafio desafio) {
-		return this.estado.coincidenciaDesafio(desafio, this);
-	};
-	
-	public void nuevoDesafio(Desafio desafio) {
-		if(true) { //aca deberia ser estado.coicideDesafio(Desafio)
-			this.desafiosAceptados.add(desafio);
-		}
-	}
-	
-	public List<Desafio> desafiosCompletados() {
-		return getDesafiosAceptados()
-				.stream()
-				.filter(desafio -> desafio.estaCompletado())
-				.collect(Collectors.toList());
+	public Preferencia getEstado() {
+		return this.preferencia;
 	}
 
-	private List<Desafio> getDesafiosAceptados() {
-		return this.desafiosAceptados;
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
 	
 }
