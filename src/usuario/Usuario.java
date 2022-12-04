@@ -72,7 +72,7 @@ public class Usuario {
 		proyectos.add(proyecto);
 	}
 	
-	public void deleteDesafio(Proyecto proyecto) {
+	public void deleteProyecto(Proyecto proyecto) {
 		proyectos.remove(proyecto);
 
 	}

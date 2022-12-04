@@ -9,9 +9,9 @@ public class PreferenciasEnJuego implements Recomendacion{
 	
 	
 		public Integer coincidenciaDesafio(Desafio desafio, Usuario usuario) {
-		return Math.abs(desafio.getCantidadDeMuestra() - usuario.getPerfil().getCantidadDeMuestras()) + 
-			   Math.abs(desafio.getDificultad()		   - usuario.getPerfil().getDificultad()) 		  + 
-			   Math.abs(desafio.getRecompensa()        - usuario.getPerfil().getRecompensa());
+		return (desafio.getCantidadDeMuestra() - usuario.getPerfil().getCantidadDeMuestras()) + 
+			   (desafio.getDificultad()		   - usuario.getPerfil().getDificultad()) 		  + 
+			   (desafio.getRecompensa()        - usuario.getPerfil().getRecompensa());
 		}
 
 
