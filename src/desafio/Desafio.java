@@ -2,6 +2,7 @@ package desafio;
 
 import coordenada.Coordenada;
 import restriccionTemporal.RestriccionTemporal;
+import usuario.Usuario;
 
 public class Desafio {
 	
@@ -25,14 +26,6 @@ public class Desafio {
 
 	public int getRecompensa() {
 		return recompensa;
-	}
-
-	public Boolean estaCompletado() {
-		return porcentajeDeCompletitud() == 100;
-	}
-	
-	public int porcentajeDeCompletitud() {
-		return 0;
 	}
 
 }

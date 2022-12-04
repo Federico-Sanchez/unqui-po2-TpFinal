@@ -3,6 +3,7 @@ package muestra;
 import java.util.Date;
 
 import coordenada.Coordenada;
+import desafio.DesafioUsuario;
 import usuario.Usuario;
 
 
@@ -55,5 +56,9 @@ public class Muestra {
 
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
+	}
+
+	public Boolean esCompatibleCon(DesafioUsuario desafioUsuario) {
+		return null;
 	}
 }

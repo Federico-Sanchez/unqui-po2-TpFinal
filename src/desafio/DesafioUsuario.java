@@ -2,18 +2,21 @@ package desafio;
 
 import java.time.LocalDate;
 
+import usuario.Usuario;
+
 public class DesafioUsuario {
 	
 	private LocalDate momentoSuperado;
 	private int voto;
 	private Desafio desafio;
 	private DesafioState estado;
+	private Usuario usuario;
 	
-	public DesafioUsuario(LocalDate momentoSuperado, int voto, Desafio desafio) {
-		super();
+	public DesafioUsuario(LocalDate momentoSuperado, int voto, Desafio desafio, Usuario usuario) {
 		this.momentoSuperado = momentoSuperado;
 		this.voto = voto;
 		this.desafio = desafio;
+		this.usuario = usuario;
 	}
 	
 	public LocalDate getMomentoSuperado() {
@@ -46,6 +49,18 @@ public class DesafioUsuario {
 
 	public void setEstado(DesafioState estado) {
 		this.estado = estado;
+	}
+
+	public Boolean estaCompletado() {
+		return getEstado().estaCompletado();
+	}
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 
 }

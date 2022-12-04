@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 public class GestorDesafio {
 
 	public List<DesafioUsuario> desafiosCompletados(List<DesafioUsuario> desafios) {
-		return desafios.stream().filter(desafio -> desafio.getEstado().estaCompletado()).collect(Collectors.toList());
+		return desafios.stream().filter(desafio -> desafio.estaCompletado()).collect(Collectors.toList());
 	}
 	
 	public int porcentajeDeCompletitud(List<DesafioUsuario> desafios, int muestrasRequeridas) {
