@@ -21,6 +21,7 @@ public class DesafioUsuario {
 		this.voto = voto;
 		this.desafio = desafio;
 		this.usuario = usuario;
+		this.estado = new DesafioIncompleto();
 	}
 	
 	public LocalDate getMomentoSuperado() {
