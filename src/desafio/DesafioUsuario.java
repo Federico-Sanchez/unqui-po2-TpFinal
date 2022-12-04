@@ -47,4 +47,6 @@ public class DesafioUsuario {
 	public void setEstado(DesafioState estado) {
 		this.estado = estado;
 	}
+
+	
 }

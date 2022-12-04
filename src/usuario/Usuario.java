@@ -11,52 +11,136 @@ import desafio.Desafio;
 import desafio.DesafioUsuario;
 
 
+
 public class Usuario {
 	
 	private String nombre;
-	private List<Muestra> muestrasRecolectadas = new ArrayList<Muestra>();
-	private PerfilUsuario perfilUsuario;
-	private Preferencia preferencia;
-	private List <DesafioUsuario> desafiosAceptados = new ArrayList<DesafioUsuario>(); 
-	
-	public Usuario(String nombre, PerfilUsuario perfilUsuario, Preferencia estado) {
-		this.setNombre(nombre);
-		this.perfilUsuario = perfilUsuario;
-		this.preferencia = estado;
-	}
-	
-	public void addMuestra(Muestra muestra) {
-		muestrasRecolectadas.add(muestra);
-	}
+	private PerfilUsuario perfil;
+	private Recomendacion recomendacionJuego;
+	private List <Proyecto> proyectos = new ArrayList<Proyecto>();
+	private List <DesafioUsuario> desafios = new ArrayList<DesafioUsuario>(); 
+	private List<Muestra> muestras = new ArrayList<Muestra>();
 	
 	
-	public List<Muestra> getMuestras() {
-		return muestrasRecolectadas;
-	}
+	
+	
 
-	public PerfilUsuario getPerfil() {
-		return perfilUsuario;
-	}
 
-	public void setPerfil(PerfilUsuario nuevoPerfil) {
-		this.perfilUsuario = nuevoPerfil;
+
+	public Usuario(String nombre,PerfilUsuario perfil,Recomendacion estado) {
+		this.nombre = nombre;
+		this.perfil = perfil;
+		this.recomendacionJuego = estado;
 	}
 	
 	
-	public void setEstado(Preferencia estado) {
-		this.preferencia = estado;
-	}
 	
-	public Preferencia getEstado() {
-		return this.preferencia;
-	}
+	
 
 	public String getNombre() {
 		return nombre;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+
+	
+	public PerfilUsuario getPerfil() {
+		return perfil;
+	}
+	
+	
+
+	public void setPerfil(PerfilUsuario nuevoPerfil) {
+		this.perfil = nuevoPerfil;
+	}
+	
+	
+
+	public Recomendacion getRecomendacionJuego() {
+		return recomendacionJuego;
+	}
+
+
+
+
+	public void setRecomendacionJuego(Recomendacion recomendacionJuego) {
+		this.recomendacionJuego = recomendacionJuego;
+	}
+
+
+
+	public List<DesafioUsuario> getDesafios() {
+		return desafios;
+	}
+
+	
+	
+	public List<Proyecto> getProyectos() {
+		return proyectos;
+	}
+
+
+	
+	public List<Muestra> getMuestras() {
+		return muestras;
+	}
+	
+	
+
+	public void agregarDesafio(DesafioUsuario desafio) {
+		this.desafios.add(desafio);
+	}
+
+	public void deleteDesafio(DesafioUsuario desafio1) {
+		desafios.remove(desafio1);
+
+	}
+
+	
+	
+	
+
+
+
+	public void addProyecto(Proyecto proyecto) {
+		proyectos.add(proyecto);
+	}
+	
+	public void deleteDesafio(Proyecto proyecto) {
+		proyectos.remove(proyecto);
+
+	}
+	
+	
+	public void addMuestra(Muestra muestra) {
+		muestras.add(muestra);
+		//notificarNuevaMuestra(muestra);
+	}
+	
+	
+	
+
+	
+	
+	public List<DesafioUsuario> desafiosCompletados() {
+		return getDesafios()
+				.stream()
+				.filter(desafio -> desafio.getEstado().estaCompleto())
+				.collect(Collectors.toList());
+	}
+
+	
+
+
+
+
+
+	public DesafioUsuario desafioConMayorPuntaje() {
+		DesafioUsuario mayorHastaAhora = desafios.get(0);
+		for (DesafioUsuario d : desafios) {
+			if(mayorHastaAhora.getVoto() <= d.getVoto()) {
+				mayorHastaAhora = d;
+			} 
+		} return mayorHastaAhora; 
 	}
 	
 }
