@@ -19,7 +19,7 @@ public class FiltroIncluirTexto implements IFiltro {
 	@Override
 	public List<Proyecto> filter(List<Proyecto> proyectos) {
 		return proyectos.stream()
-				.filter(proyecto -> proyecto.tieneElTextoEnElTitulo(getTexto()))
+				.filter(proyecto -> proyecto.tieneElTextoEnElTitulo(this.getTexto()))
 				.collect(Collectors.toList());
 	}
 
