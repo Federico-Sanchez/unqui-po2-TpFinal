@@ -19,6 +19,10 @@ public class RestriccionCombinada extends RestriccionTemporal {
 	}
 	
 
+	public void eliminarRestriccion(RestriccionTemporal restriccion) {
+		this.getRestricciones().remove(restriccion);
+	}
+	
 	
 	@Override
 	public boolean esRestriccion(Date fecha) {
@@ -35,4 +39,5 @@ public class RestriccionCombinada extends RestriccionTemporal {
 		return (cantidadDeRestricciones > 0);
 	}
 	
+
 }

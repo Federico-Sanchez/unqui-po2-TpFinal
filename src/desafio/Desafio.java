@@ -48,10 +48,10 @@ public class Desafio {
 	}
 
 
-	public void nuevaMuestra(Muestra muestra) {
-		if(area.estaDentroDeLaZona(muestra) && restriccion.estaEnFecha(muestra) && !estaCompletado()) {			
-			this.cantidadDeMuestra = this.cantidadDeMuestra + 1;
-		}
-	}
+//	public void nuevaMuestra(Muestra muestra) {
+//		if(area.estaDentroDeLaZona(muestra) && restriccion.estaEnFecha(muestra) && !estaCompletado()) {			
+//			this.cantidadDeMuestra = this.cantidadDeMuestra + 1;
+//		}
+//	}
 	
 }
