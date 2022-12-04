@@ -59,6 +59,6 @@ public class Muestra {
 	}
 
 	public Boolean esCompatibleCon(DesafioUsuario desafioUsuario) {
-		return null;
+		return false;
 	}
 }

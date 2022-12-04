@@ -62,5 +62,17 @@ public class DesafioUsuario {
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
 	}
+	
+	public int getPorcentajeDeCompletitud() {
+		return muestrasCompatibles() / getDesafio().getCantidadDeMuestra();
+	}
+
+	private int muestrasCompatibles() {
+		return (int) getUsuario()
+				.getMuestras()
+				.stream()
+				.filter(muestra -> muestra.esCompatibleCon(this))
+				.count();
+	}
 
 }
