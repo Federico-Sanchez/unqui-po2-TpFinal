@@ -61,4 +61,5 @@ class FiltroIncluirTextoTest {
 		
 		assertTrue(resultado.contains(proyecto1));
 	}
+	
 }

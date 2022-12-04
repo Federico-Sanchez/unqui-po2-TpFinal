@@ -60,4 +60,5 @@ class FiltroIncluirCategoriasTest {
 //		assertEquals(1, categoriasParaProyecto.size());
 //		assertTrue(categoriasParaProyecto.contains("a"));
 	}
+	
 }
