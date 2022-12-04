@@ -20,7 +20,7 @@ public class FiltroIncluirCategorias implements IFiltro{
 	@Override
 	public List<Proyecto> filter(List<Proyecto> proyectos) {
 		return proyectos.stream()
-				.filter(proyecto -> proyecto.tieneLasCategorias(getCategorias()))
+				.filter(proyecto -> proyecto.tieneLasCategorias(this.getCategorias()))
 				.collect(Collectors.toList());
 	}
 
