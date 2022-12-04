@@ -18,7 +18,7 @@ public class Proyecto {
 		super();
 		this.nombre = nombre;
 		this.descripcion = descripcion;
-		this.categorias = new ArrayList<String>();;
+		this.categorias = new ArrayList<String>();
 	}
 
 	public List<Muestra> getMuestras() {
@@ -65,7 +65,17 @@ public class Proyecto {
 		return this.getNombre() == texto;
 	}
 
-	public Boolean tieneLasCategorias(List<String> categorias2) {
-		return false;
+	public Boolean tieneLasCategorias(List<String> categoriasRecibidas) {
+		
+		int cantidadDeCategorias = categoriasRecibidas.size();
+		int categoriasContenidas = 0;
+		for (int i = 0; i < categoriasRecibidas.size(); i++) {
+			if (this.getCategorias().contains(categoriasRecibidas.get(i))) {
+				categoriasContenidas = categoriasContenidas + 1;
+			}
+			
+		}
+		return cantidadDeCategorias == categoriasContenidas;
 	}
+
 }
