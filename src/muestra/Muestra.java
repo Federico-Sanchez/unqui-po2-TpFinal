@@ -45,7 +45,6 @@ public class Muestra {
 		return coordenadaGeografica;
 	}
 
-
 	public void setCoordenadaGeografica(Coordenada coordenadaGeografica) {
 		this.coordenadaGeografica = coordenadaGeografica;
 	}

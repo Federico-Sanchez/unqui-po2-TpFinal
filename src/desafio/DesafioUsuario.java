@@ -2,6 +2,7 @@ package desafio;
 
 import java.time.LocalDate;
 
+import muestra.Muestra;
 import usuario.Usuario;
 
 public class DesafioUsuario {
@@ -73,6 +74,12 @@ public class DesafioUsuario {
 				.stream()
 				.filter(muestra -> muestra.esCompatibleCon(this))
 				.count();
+	}
+
+	public void nuevaMuestra(Muestra muestra) {
+		if (muestra.esCompatibleCon(this)) {
+			getDesafio().nuevaMuestra();
+		}
 	}
 
 }

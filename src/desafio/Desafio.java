@@ -18,6 +18,10 @@ public class Desafio {
 	public int getCantidadDeMuestra() {
 		return cantidadDeMuestra;
 	}
+	
+	public void setCantidadDeMuestra(int cantidadDeMuestra) {
+		this.cantidadDeMuestra = cantidadDeMuestra;
+	}
 
 	public int getDificultad() {
 		return dificultad;
@@ -25,6 +29,10 @@ public class Desafio {
 
 	public int getRecompensa() {
 		return recompensa;
+	}
+
+	public void nuevaMuestra() {
+		setCantidadDeMuestra(getCantidadDeMuestra() + 1);
 	}
 
 }
