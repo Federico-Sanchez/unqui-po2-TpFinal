@@ -2,7 +2,6 @@ package desafio;
 
 import coordenada.Coordenada;
 import restriccionTemporal.RestriccionTemporal;
-import usuario.Usuario;
 
 public class Desafio {
 	

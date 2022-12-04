@@ -2,10 +2,7 @@ package usuario;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Stream;
-
 import desafio.Desafio;
-import proyecto.Proyecto;
 
 public class PreferenciasEnJuego implements Recomendacion{
 

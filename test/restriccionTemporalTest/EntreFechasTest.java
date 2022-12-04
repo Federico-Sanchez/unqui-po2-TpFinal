@@ -1,4 +1,4 @@
-package restriccionTemporal;
+package restriccionTemporalTest;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -7,6 +7,8 @@ import java.util.Date;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import restriccionTemporal.EntreFechas;
 
 class EntreFechasTest {
 	private EntreFechas restriccionEntreFechas;

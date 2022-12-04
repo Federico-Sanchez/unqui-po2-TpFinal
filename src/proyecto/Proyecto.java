@@ -3,7 +3,6 @@ package proyecto;
 import java.util.ArrayList;
 import java.util.List;
 
-import desafio.Desafio;
 import muestra.Muestra;
 import usuario.Usuario;
 

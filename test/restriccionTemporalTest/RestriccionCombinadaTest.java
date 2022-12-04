@@ -1,4 +1,4 @@
-package restriccionTemporal;
+package restriccionTemporalTest;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
@@ -9,6 +9,9 @@ import java.util.Date;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
+
+import restriccionTemporal.RestriccionCombinada;
+import restriccionTemporal.RestriccionTemporal;
 
 class RestriccionCombinadaTest {
 	private RestriccionCombinada restriccionCombinada;

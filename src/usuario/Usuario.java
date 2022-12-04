@@ -7,7 +7,6 @@ import java.util.stream.Collectors;
 
 import muestra.Muestra;
 import proyecto.Proyecto;
-import desafio.Desafio;
 import desafio.DesafioUsuario;
 
 
@@ -124,7 +123,7 @@ public class Usuario {
 	public List<DesafioUsuario> desafiosCompletados() {
 		return getDesafios()
 				.stream()
-				.filter(desafio -> desafio.getEstado().estaCompleto())
+				.filter(desafio -> desafio.estaCompletado())
 				.collect(Collectors.toList());
 	}
 
