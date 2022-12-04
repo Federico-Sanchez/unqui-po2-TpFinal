@@ -10,17 +10,18 @@ public class Proyecto {
 	
 	private String nombre;
 	private String descripcion;
-	private ArrayList<String> categorias = new ArrayList<String>();
-	private ArrayList<Usuario> usuariosActivos = new ArrayList<Usuario>();
-	private ArrayList<Muestra> muestras = new ArrayList<Muestra>();
+	private List<String> categorias;
+	private List<Usuario> usuariosActivos = new ArrayList<Usuario>();
+	private List<Muestra> muestras = new ArrayList<Muestra>();
 	
-	public Proyecto(String nombre, String descripcion, ArrayList<String> categorias) {
+	public Proyecto(String nombre, String descripcion, List<String> categorias) {
+		super();
 		this.nombre = nombre;
 		this.descripcion = descripcion;
-		this.categorias = categorias;
+		this.categorias = new ArrayList<String>();;
 	}
 
-	public ArrayList<Muestra> getMuestras() {
+	public List<Muestra> getMuestras() {
 		return muestras;
 	}
 
@@ -28,7 +29,7 @@ public class Proyecto {
 		this.muestras.add(muestra);
 	}
 
-	public ArrayList<Usuario> getUsuariosActivos() {
+	public List<Usuario> getUsuariosActivos() {
 		return usuariosActivos;
 	}
 
@@ -52,7 +53,7 @@ public class Proyecto {
 		this.descripcion = descripcion;
 	}
 
-	public ArrayList<String> getCategorias() {
+	public List<String> getCategorias() {
 		return categorias;
 	}
 
@@ -61,11 +62,10 @@ public class Proyecto {
 	}
 	
 	public Boolean tieneElTextoEnElTitulo(String texto) {
-		return false;
+		return this.getNombre() == texto;
 	}
 
 	public Boolean tieneLasCategorias(List<String> categorias2) {
 		return false;
 	}
-
 }
