@@ -21,6 +21,9 @@ public class Coordenada {
 	}
 
 	public boolean estaDentroDelArea(Area area) {
-		return false;
+		double diferenciaCoordenada = getLatitud() - getLatitud();
+		double diferenciaArea = area.getCoordenada().getLatitud() - area.getCoordenada().getLatitud();
+
+		return (Math.pow(2, diferenciaCoordenada) + Math.pow(2, diferenciaArea)) <= area.getRadio();
 	}
 }

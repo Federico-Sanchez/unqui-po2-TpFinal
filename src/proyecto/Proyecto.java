@@ -15,7 +15,6 @@ public class Proyecto {
 	private ArrayList<Muestra> muestras = new ArrayList<Muestra>();
 	
 	public Proyecto(String nombre, String descripcion, ArrayList<String> categorias) {
-		super();
 		this.nombre = nombre;
 		this.descripcion = descripcion;
 		this.categorias = categorias;
