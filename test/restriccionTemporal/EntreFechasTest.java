@@ -8,9 +8,6 @@ import java.util.Date;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import desafio.EntreFechas;
-
-
 class EntreFechasTest {
 	private EntreFechas restriccionEntreFechas;
 	private Date fecha;

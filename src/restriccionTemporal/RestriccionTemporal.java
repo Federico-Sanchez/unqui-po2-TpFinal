@@ -1,4 +1,4 @@
-package restrinccionTemporal;
+package restriccionTemporal;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

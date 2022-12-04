@@ -1,7 +1,7 @@
 package desafio;
 
 import coordenada.Coordenada;
-import restrinccionTemporal.RestriccionTemporal;
+import restriccionTemporal.RestriccionTemporal;
 
 public class Desafio {
 	
@@ -32,7 +32,6 @@ public class Desafio {
 	}
 	
 	public int porcentajeDeCompletitud() {
-		//calcular porcentaje
 		return 0;
 	}
 

@@ -1,6 +1,8 @@
-package desafio;
+package restriccionTemporal;
 
 import java.util.Date;
+
+import muestra.Muestra;
 
 public class DuranteSemana extends RestriccionTemporal {
 	
@@ -11,5 +13,11 @@ public class DuranteSemana extends RestriccionTemporal {
 		} else {
 			return false;
 		}
+	}
+
+	@Override
+	protected boolean estaEnFecha(Muestra muestra) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 }

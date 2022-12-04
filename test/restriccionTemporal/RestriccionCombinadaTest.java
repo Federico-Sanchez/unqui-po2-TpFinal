@@ -4,17 +4,11 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
-
-import desafio.DuranteFinDeSemana;
-import desafio.DuranteSemana;
-import desafio.RestriccionCombinada;
-import desafio.RestriccionTemporal;
 
 class RestriccionCombinadaTest {
 	private RestriccionCombinada restriccionCombinada;

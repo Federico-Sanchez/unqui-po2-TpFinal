@@ -1,8 +1,6 @@
 package desafio;
 
 import java.time.LocalDate;
-import java.util.List;
-import java.util.stream.Collectors;
 
 public class DesafioUsuario {
 	
@@ -49,5 +47,5 @@ public class DesafioUsuario {
 	public void setEstado(DesafioState estado) {
 		this.estado = estado;
 	}
-	
+
 }

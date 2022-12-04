@@ -9,8 +9,6 @@ import java.util.Date;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import desafio.DuranteFinDeSemana;
-
 class DuranteFinDeSemanaTest {
 	private DuranteFinDeSemana restriccionDuranteFinDeSemana;
 
