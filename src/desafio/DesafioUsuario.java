@@ -1,6 +1,8 @@
 package desafio;
 
 import java.time.LocalDate;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class DesafioUsuario {
 	
@@ -8,6 +10,13 @@ public class DesafioUsuario {
 	private int voto;
 	private Desafio desafio;
 	private DesafioState estado;
+	
+	public DesafioUsuario(LocalDate momentoSuperado, int voto, Desafio desafio) {
+		super();
+		this.momentoSuperado = momentoSuperado;
+		this.voto = voto;
+		this.desafio = desafio;
+	}
 	
 	public LocalDate getMomentoSuperado() {
 		return momentoSuperado;
@@ -25,13 +34,6 @@ public class DesafioUsuario {
 		this.voto = voto;
 	}
 
-	public DesafioUsuario(LocalDate momentoSuperado, int voto, Desafio desafio) {
-		super();
-		this.momentoSuperado = momentoSuperado;
-		this.voto = voto;
-		this.desafio = desafio;
-	}
-
 	public Desafio getDesafio() {
 		return desafio;
 	}
@@ -47,4 +49,5 @@ public class DesafioUsuario {
 	public void setEstado(DesafioState estado) {
 		this.estado = estado;
 	}
+	
 }

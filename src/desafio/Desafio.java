@@ -14,19 +14,14 @@ public class Desafio {
 		this.dificultad = dificultad;
 		this.recompensa = recompensa;
 	}
-	
-	
+
 	public int getCantidadDeMuestra() {
 		return cantidadDeMuestra;
 	}
 
-
-
 	public int getDificultad() {
 		return dificultad;
 	}
-
-
 
 	public int getRecompensa() {
 		return recompensa;
