@@ -3,10 +3,7 @@ package muestra;
 import java.util.Date;
 
 import coordenada.Coordenada;
-import desafio.DesafioUsuario;
 import usuario.Usuario;
-
-
 
 public class Muestra {
 	private Coordenada coordenadaGeografica;
@@ -40,7 +37,6 @@ public class Muestra {
 		return this.getSoloHora() + ":" + this.getSoloMinutos();
 	}
 
-
 	public Coordenada getCoordenadaGeografica() {
 		return coordenadaGeografica;
 	}
@@ -57,7 +53,4 @@ public class Muestra {
 		this.usuario = usuario;
 	}
 
-	public Boolean esCompatibleCon(DesafioUsuario desafioUsuario) {
-		return false;
-	}
 }

@@ -1,5 +1,7 @@
 package coordenada;
 
+import desafio.Area;
+
 public class Coordenada {
 	private double latitud;
 	private double longitud;
@@ -16,5 +18,9 @@ public class Coordenada {
 
 	public double getLongitud() {
 		return longitud;
+	}
+
+	public boolean estaDentroDelArea(Area area) {
+		return false;
 	}
 }

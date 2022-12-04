@@ -1,7 +1,9 @@
 package desafio;
 
 import java.time.LocalDate;
+import java.util.Date;
 
+import coordenada.Coordenada;
 import muestra.Muestra;
 import usuario.Usuario;
 
@@ -72,14 +74,27 @@ public class DesafioUsuario {
 		return (int) getUsuario()
 				.getMuestras()
 				.stream()
-				.filter(muestra -> muestra.esCompatibleCon(this))
+				.filter(muestra -> esCompatibleCon(muestra))
 				.count();
 	}
 
 	public void nuevaMuestra(Muestra muestra) {
-		if (muestra.esCompatibleCon(this)) {
+		if (esCompatibleCon(muestra)) {
 			getDesafio().nuevaMuestra();
 		}
+	}
+	
+	private Boolean esCompatibleCon(Muestra muestra) {
+		return estaDentroDelArea(muestra.getCoordenadaGeografica())
+				&& estaDentroDeLaFecha(muestra.getFechaYHora());
+	}
+
+	private boolean estaDentroDeLaFecha(Date fechaYHora) {
+		return getDesafio().getRestriccion().esRestriccion(fechaYHora);
+	}
+
+	private boolean estaDentroDelArea(Coordenada coordenadaGeografica) {
+		return coordenadaGeografica.estaDentroDelArea(getDesafio().getArea());
 	}
 
 }

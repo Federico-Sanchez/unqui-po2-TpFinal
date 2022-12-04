@@ -1,6 +1,5 @@
 package desafio;
 
-import coordenada.Coordenada;
 import restriccionTemporal.RestriccionTemporal;
 
 public class Desafio {
@@ -8,11 +7,15 @@ public class Desafio {
 	private int cantidadDeMuestra;
 	private int dificultad;
 	private int recompensa;
+	private Area area;
+	private RestriccionTemporal restriccion;
 	
-	public Desafio(Coordenada area, RestriccionTemporal restriccion, int cantidadDeMuestra, int dificultad, int recompensa) {
+	public Desafio(Area area, RestriccionTemporal restriccion, int cantidadDeMuestra, int dificultad, int recompensa) {
 		this.cantidadDeMuestra = cantidadDeMuestra;
 		this.dificultad = dificultad;
 		this.recompensa = recompensa;
+		this.recompensa = recompensa;
+		this.setRestriccion(restriccion);
 	}
 
 	public int getCantidadDeMuestra() {
@@ -33,6 +36,22 @@ public class Desafio {
 
 	public void nuevaMuestra() {
 		setCantidadDeMuestra(getCantidadDeMuestra() + 1);
+	}
+
+	public Area getArea() {
+		return area;
+	}
+
+	public void setArea(Area area) {
+		this.area = area;
+	}
+
+	public RestriccionTemporal getRestriccion() {
+		return restriccion;
+	}
+
+	public void setRestriccion(RestriccionTemporal restriccion) {
+		this.restriccion = restriccion;
 	}
 
 }
