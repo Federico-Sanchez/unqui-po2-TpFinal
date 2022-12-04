@@ -1,6 +1,8 @@
-package usuario;
+package desafio;
 
-public class DesafioEspera implements EstadoDesafioDeUsuario {
+import usuario.EstadoDesafioDeUsuario;
+
+public class DesafioVencido implements EstadoDesafioDeUsuario {
 
 	@Override
 	public boolean estaCompleto() {
@@ -9,6 +11,7 @@ public class DesafioEspera implements EstadoDesafioDeUsuario {
 
 	@Override
 	public float getPorcentajeDeCompletitud(DesafioDeUsuario desafioDeUsuario) {
+		// TODO Auto-generated method stub
 		return 0;
 	}
 

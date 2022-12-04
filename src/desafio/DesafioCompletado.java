@@ -1,4 +1,7 @@
-package usuario;
+package desafio;
+
+import usuario.DesafioDeUsuario;
+import usuario.EstadoDesafioDeUsuario;
 
 public class DesafioCompletado implements EstadoDesafioDeUsuario {
 

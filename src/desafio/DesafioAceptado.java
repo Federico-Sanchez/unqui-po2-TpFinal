@@ -1,9 +1,13 @@
-package usuario;
+package desafio;
 
-public class DesafioVencido implements EstadoDesafioDeUsuario {
+import usuario.DesafioDeUsuario;
+import usuario.EstadoDesafioDeUsuario;
+
+public class DesafioAceptado implements EstadoDesafioDeUsuario {
 
 	@Override
 	public boolean estaCompleto() {
+		// TODO Auto-generated method stub
 		return false;
 	}
 
