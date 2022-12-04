@@ -23,8 +23,8 @@ public class Area {
 		this.radio = radio;
 	}
 
-	public Area(Coordenada coordenada, Double radio) {
+	public Area(Coordenada coordenada, int i) {
 		this.coordenada = coordenada;
-		this.radio = radio;
+		this.radio = (double) i;
 	}
 }
