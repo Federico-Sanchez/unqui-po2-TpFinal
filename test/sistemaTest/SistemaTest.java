@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import filtro.FiltroIncluirTexto;
 import proyecto.Proyecto;
 import sistema.Sistema;
 
@@ -40,6 +41,15 @@ public class SistemaTest {
 		sistema.agregarProyecto(proyectoMock3);
 		
 		assertEquals(sistema.getProyectos().size(), 3);
+	}
+	
+	@Test
+	void testBuscarProyecto() {
+		
+		when(proyectoMock3.tieneElTextoEnElTitulo("Tierra")).thenReturn(true);
+		sistema.agregarProyecto(proyectoMock3);
+		
+		assertTrue(sistema.buscar(new FiltroIncluirTexto("Tierra")).contains(proyectoMock3));
 	}
 	
 }
