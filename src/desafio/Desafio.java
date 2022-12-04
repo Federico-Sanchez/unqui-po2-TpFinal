@@ -34,10 +34,6 @@ public class Desafio {
 		return recompensa;
 	}
 
-	public void nuevaMuestra() {
-		setCantidadDeMuestra(getCantidadDeMuestra() + 1);
-	}
-
 	public Area getArea() {
 		return area;
 	}

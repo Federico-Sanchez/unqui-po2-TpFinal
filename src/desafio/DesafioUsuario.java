@@ -14,6 +14,7 @@ public class DesafioUsuario {
 	private Desafio desafio;
 	private DesafioState estado;
 	private Usuario usuario;
+	private int MuestrasRecolectadas;
 	
 	public DesafioUsuario(LocalDate momentoSuperado, int voto, Desafio desafio, Usuario usuario) {
 		this.momentoSuperado = momentoSuperado;
@@ -34,8 +35,8 @@ public class DesafioUsuario {
 		return voto;
 	}
 
-	public void setVoto(int voto) {
-		this.voto = voto;
+	public void votar(int voto) {
+		getEstado().votarDesafio(this, voto);
 	}
 
 	public Desafio getDesafio() {
@@ -69,8 +70,8 @@ public class DesafioUsuario {
 	public int getPorcentajeDeCompletitud() {
 		return muestrasCompatibles() / getDesafio().getCantidadDeMuestra();
 	}
-
-	private int muestrasCompatibles() {
+	
+	public int muestrasCompatibles() {
 		return (int) getUsuario()
 				.getMuestras()
 				.stream()
@@ -79,12 +80,10 @@ public class DesafioUsuario {
 	}
 
 	public void nuevaMuestra(Muestra muestra) {
-		if (esCompatibleCon(muestra)) {
-			getDesafio().nuevaMuestra();
-		}
+		getEstado().nuevaMuestra(this, muestra);
 	}
 	
-	private Boolean esCompatibleCon(Muestra muestra) {
+	public Boolean esCompatibleCon(Muestra muestra) {
 		return estaDentroDelArea(muestra.getCoordenadaGeografica())
 				&& estaDentroDeLaFecha(muestra.getFechaYHora());
 	}
@@ -95,6 +94,26 @@ public class DesafioUsuario {
 
 	private boolean estaDentroDelArea(Coordenada coordenadaGeografica) {
 		return coordenadaGeografica.estaDentroDelArea(getDesafio().getArea());
+	}
+
+	public void setVoto(int voto) {
+		this.voto = voto;
+	}
+
+	public int getMuestrasRecolectadas() {
+		return MuestrasRecolectadas;
+	}
+
+	public void setMuestrasRecolectadas(int muestrasRecolectadas) {
+		MuestrasRecolectadas = muestrasRecolectadas;
+	}
+
+	public void incrementarMuestrasRecolectadas() {
+		setMuestrasRecolectadas(getMuestrasRecolectadas() + 1);
+	}
+
+	public boolean esUltimaMuestra() {
+		return getMuestrasRecolectadas() == desafio.getCantidadDeMuestra();
 	}
 
 }
