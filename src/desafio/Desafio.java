@@ -11,12 +11,12 @@ public class Desafio {
 	private RestriccionTemporal restriccion;
 	
 	public Desafio(Area area, RestriccionTemporal restriccion, int cantidadDeMuestra, int dificultad, int recompensa) {
-		this.cantidadDeMuestra = cantidadDeMuestra;
+		setCantidadDeMuestra(cantidadDeMuestra);
 		this.dificultad = dificultad;
 		this.recompensa = recompensa;
 		this.recompensa = recompensa;
 		this.setRestriccion(restriccion);
-		this.area = area;
+		setArea(area);
 	}
 
 	public int getCantidadDeMuestra() {

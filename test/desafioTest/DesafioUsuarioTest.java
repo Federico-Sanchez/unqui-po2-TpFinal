@@ -74,12 +74,13 @@ public class DesafioUsuarioTest {
 	void unDesafioSePuedeCompletar() {
 		
 		when(desafioUsuario.esCompatibleCon(muestraMock)).thenReturn(true);
-
+		
 		desafioUsuario.nuevaMuestra(muestraMock);
 		desafioUsuario.nuevaMuestra(muestraMock);
-
+		
 		assertTrue(desafioUsuario.estaCompletado());
 		assertEquals(desafioUsuario.getPorcentajeDeCompletitud(), 100);
+		assertEquals(desafioUsuario.getMomentoSuperado(), new Date());
 	}
 	
 	@Test
