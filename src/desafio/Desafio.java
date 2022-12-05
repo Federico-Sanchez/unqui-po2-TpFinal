@@ -16,6 +16,7 @@ public class Desafio {
 		this.recompensa = recompensa;
 		this.recompensa = recompensa;
 		this.setRestriccion(restriccion);
+		this.area = area;
 	}
 
 	public int getCantidadDeMuestra() {

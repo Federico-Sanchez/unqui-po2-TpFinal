@@ -1,6 +1,5 @@
 package desafio;
 
-import java.time.LocalTime;
 import java.util.Date;
 
 import coordenada.Coordenada;
@@ -9,26 +8,26 @@ import usuario.Usuario;
 
 public class DesafioUsuario {
 	
-	private LocalTime momentoSuperado;
+	private Date momentoSuperado;
 	private int voto;
 	private Desafio desafio;
 	private DesafioState estado;
 	private Usuario usuario;
 	private int MuestrasRecolectadas;
 	
-	public DesafioUsuario(int voto, Desafio desafio, Usuario usuario) {
-		this.voto = voto;
+	public DesafioUsuario(Desafio desafio, Usuario usuario) {
 		this.desafio = desafio;
 		this.usuario = usuario;
 		this.estado = new DesafioIncompleto();
+		this.voto = 0;
 	}
 	
-	public LocalTime getMomentoSuperado() {
+	public Date getMomentoSuperado() {
 		return momentoSuperado;
 	}
 
-	public void setMomentoSuperado(LocalTime localTime) {
-		this.momentoSuperado = localTime;
+	public void setMomentoSuperado(Date date) {
+		this.momentoSuperado = date;
 	}
 
 	public int getVoto() {
@@ -55,7 +54,7 @@ public class DesafioUsuario {
 		this.estado = estado;
 	}
 
-	public Boolean estaCompletado() {
+	public boolean estaCompletado() {
 		return getEstado().estaCompletado();
 	}
 
@@ -83,16 +82,16 @@ public class DesafioUsuario {
 		getEstado().nuevaMuestra(this, muestra);
 	}
 	
-	public Boolean esCompatibleCon(Muestra muestra) {
+	public boolean esCompatibleCon(Muestra muestra) {
 		return estaDentroDelArea(muestra.getCoordenadaGeografica())
 				&& estaDentroDeLaFecha(muestra.getFechaYHora());
 	}
 
-	private boolean estaDentroDeLaFecha(Date fechaYHora) {
+	public boolean estaDentroDeLaFecha(Date fechaYHora) {
 		return getDesafio().getRestriccion().esRestriccion(fechaYHora);
 	}
 
-	private boolean estaDentroDelArea(Coordenada coordenadaGeografica) {
+	public boolean estaDentroDelArea(Coordenada coordenadaGeografica) {
 		return coordenadaGeografica.estaDentroDelArea(getDesafio().getArea());
 	}
 

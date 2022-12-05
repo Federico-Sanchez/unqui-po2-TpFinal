@@ -4,7 +4,7 @@ import muestra.Muestra;
 
 public abstract class DesafioState {
 
-	public Boolean estaCompletado() {
+	public boolean estaCompletado() {
 		return false;
 	}
 

@@ -58,7 +58,7 @@ public class RecomendacionTest {
 		desafio5 = new Desafio(area, restriccion, 10, 3, 20);
 		desafio6 = new Desafio(area, restriccion, 26, 4, 40);
 		
-		desafioDeUsuario = new DesafioUsuario( 0, desafio4, usuario);
+		desafioDeUsuario = new DesafioUsuario( desafio4, usuario);
 
 		usuario.agregarDesafio(desafioDeUsuario);
 	}

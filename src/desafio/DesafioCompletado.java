@@ -2,7 +2,8 @@ package desafio;
 
 public class DesafioCompletado extends DesafioState {
 
-	public boolean estaCompleto() {
+	@Override
+	public boolean estaCompletado() {
 		return true;
 	}
 

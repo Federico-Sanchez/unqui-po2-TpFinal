@@ -3,20 +3,16 @@ package usuarioTest;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.mock;
 
-import java.util.List;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import desafio.Area;
 import desafio.Desafio;
-import desafio.DesafioCompletado;
 import desafio.DesafioUsuario;
 import desafio.GestorDesafio;
 import muestra.Muestra;
 import proyecto.Proyecto;
 import restriccionTemporal.RestriccionTemporal;
-import usuario.Favorito;
 import usuario.PerfilUsuario;
 import usuario.Recomendacion;
 import usuario.Usuario;

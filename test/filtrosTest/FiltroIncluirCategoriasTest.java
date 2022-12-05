@@ -1,4 +1,4 @@
-package filtro;
+package filtrosTest;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -8,6 +8,8 @@ import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import filtro.FiltroIncluirCategorias;
+import filtro.IFiltro;
 import proyecto.Proyecto;
 
 class FiltroIncluirCategoriasTest {
