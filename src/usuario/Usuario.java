@@ -89,6 +89,10 @@ public class Usuario {
 	public List<DesafioUsuario> desafiosCompletados() {
 		return gestorDesafio.desafiosCompletados(getDesafios());
 	}
+	
+	public int porcentajeDeCompletitud() {
+		return gestorDesafio.porcentajeDeCompletitud(getDesafios());
+	}
 
 	public DesafioUsuario desafioConMayorPuntaje() {
 		DesafioUsuario mayorHastaAhora = desafios.get(0);

@@ -79,6 +79,20 @@ public class DesafioUsuarioTest {
 		desafioUsuario.nuevaMuestra(muestraMock);
 
 		assertTrue(desafioUsuario.estaCompletado());
+		assertEquals(desafioUsuario.getPorcentajeDeCompletitud(), 100);
+	}
+	
+	@Test
+	void unUsuarioPuedeVotarSobreUnDesafioCompleto() {
+		
+		when(desafioUsuario.esCompatibleCon(muestraMock)).thenReturn(true);
+
+		desafioUsuario.nuevaMuestra(muestraMock);
+		desafioUsuario.nuevaMuestra(muestraMock);
+
+		desafioUsuario.votar(4);
+		
+		assertEquals(desafioUsuario.getVoto(), 4);
 	}
 	
 }

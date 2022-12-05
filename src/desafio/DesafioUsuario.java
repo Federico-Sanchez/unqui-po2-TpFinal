@@ -16,8 +16,8 @@ public class DesafioUsuario {
 	private int MuestrasRecolectadas;
 	
 	public DesafioUsuario(Desafio desafio, Usuario usuario) {
-		this.desafio = desafio;
-		this.usuario = usuario;
+		setDesafio(desafio);
+		setUsuario(usuario);
 		this.estado = new DesafioIncompleto();
 		this.voto = 0;
 	}
@@ -42,7 +42,7 @@ public class DesafioUsuario {
 		return desafio;
 	}
 
-	public void setDesafio(Desafio desafio) {
+	private void setDesafio(Desafio desafio) {
 		this.desafio = desafio;
 	}
 
@@ -62,12 +62,12 @@ public class DesafioUsuario {
 		return usuario;
 	}
 
-	public void setUsuario(Usuario usuario) {
+	private void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
 	}
 	
 	public int getPorcentajeDeCompletitud() {
-		return muestrasCompatibles() / getDesafio().getCantidadDeMuestra();
+		return getEstado().getPorcentajeDeCompletitud(this);
 	}
 	
 	public int muestrasCompatibles() {
