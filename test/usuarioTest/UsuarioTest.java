@@ -33,6 +33,8 @@ public class UsuarioTest {
 	DesafioUsuario desafioUsuario;
 	DesafioUsuario desafioUsuario2;
 	Muestra muestra;
+	Desafio desafio;
+	DesafioUsuario desafioUsuario3;
 	
 	@BeforeEach
 	void setUp() {
@@ -48,8 +50,8 @@ public class UsuarioTest {
 		proyectoMock1 = mock(Proyecto.class);
 		usuario =new Usuario("Jose", perfil, recomendacion, gestorDesafio);
 		muestra = mock(Muestra.class);
-		
-
+		desafio = new Desafio(area, restriccion, 5, 2, 2);
+		desafioUsuario3 = new DesafioUsuario(desafio, usuario);
 	}
 	
 	
@@ -85,8 +87,16 @@ public class UsuarioTest {
 		usuario.agregarDesafio(desafioUsuario);
 		usuario.agregarDesafio(desafioUsuario2);
 		
-		
 		assertEquals(0,usuario.desafiosCompletados().size());
+				
+	}
+	
+	@Test 
+	void porcentajeDeCompletitud() {
+		
+		usuario.agregarDesafio(desafioUsuario3);
+		
+		assertEquals(0, usuario.porcentajeDeCompletitud());
 				
 	}
 	

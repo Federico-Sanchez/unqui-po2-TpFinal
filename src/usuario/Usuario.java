@@ -22,8 +22,8 @@ public class Usuario {
 
 	public Usuario(String nombre,PerfilUsuario perfil,Recomendacion estado, GestorDesafio gestorDesafio) {
 		this.nombre = nombre;
-		this.perfil = perfil;
-		this.recomendacionJuego = estado;
+		setPerfil(perfil);
+		setRecomendacionJuego(estado);
 		this.gestorDesafio = gestorDesafio;
 	}
 	
