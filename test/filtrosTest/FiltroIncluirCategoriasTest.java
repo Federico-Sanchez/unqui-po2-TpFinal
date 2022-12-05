@@ -55,12 +55,8 @@ class FiltroIncluirCategoriasTest {
 	void test() {
 		List<Proyecto> resultado = filtroIncluirCategorias.filter(proyectos);
 		
-		assertEquals(0, resultado.size());
-		//assertTrue(resultado.contains(proyecto1));
-//		assertEquals(1, categorias.size());
-//		assertTrue(categorias.contains("a"));
-//		assertEquals(1, categoriasParaProyecto.size());
-//		assertTrue(categoriasParaProyecto.contains("a"));
+		assertEquals(1, resultado.size());
+
 	}
 	
 }

@@ -15,10 +15,9 @@ public class Proyecto {
 	private List<Muestra> muestras = new ArrayList<Muestra>();
 	
 	public Proyecto(String nombre, String descripcion, List<String> categorias) {
-		super();
-		this.nombre = nombre;
-		this.descripcion = descripcion;
-		this.categorias = new ArrayList<String>();
+		setNombre(nombre);
+		setDescripcion(descripcion);
+		setCategorias(categorias);
 	}
 
 	public List<Muestra> getMuestras() {
@@ -57,7 +56,7 @@ public class Proyecto {
 		return categorias;
 	}
 
-	public void setCategorias(ArrayList<String> categorias) {
+	public void setCategorias(List<String> categorias) {
 		this.categorias = categorias;
 	}
 	
